@@ -1,4 +1,5 @@
-File.read!("./full.txt")
+"./full.txt"
+  |> File.read!()
   |> String.split("\n")
   |> Enum.chunk_by(&(&1 == ""))
   |> Enum.filter(
